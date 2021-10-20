@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -41,26 +42,38 @@ namespace Serialization
         }
         private void PopulateCB(List<Games> gg)
         {
-            cbBox.Items.Clear();
-            string[] value = Item.platform.Split(',');
+           
+            cbBox.Items.Add("all");
+            cbBox.SelectedIndex=0;
             foreach (var item in gg)
             {
-                cbBox.Items.Add(item);
+             
+                if (!cbBox.Items.Contains(item.platform))
+                {
+                    cbBox.Items.Add(item.platform);
+                }
             }
 
         }
             private void btb_Click(object sender, RoutedEventArgs e)
             {
 
-                window w = new window();
+            string jj = JsonConvert.SerializeObject(G);
+            File.WriteAllText("games.json", jj);
 
-
-            }
-
-            private void cbBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-            {
-                Games selecteditem = (Games)cbBox.SelectedItem;
-            }
         }
+
+      
+       
+
+        private void lstbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Games selection = (Games)lstbox.SelectedItems;
+            window w = new window();
+            w.SetupWindow(selection);
+            w.ShowDialog();
+
+        }
+    }
     }
 

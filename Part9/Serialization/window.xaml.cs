@@ -23,5 +23,9 @@ namespace Serialization
         {
             InitializeComponent();
         }
+        public void SetupWindow(Games GG)
+        {
+            txtdes.Text = GG.summary;
+        }
     }
 }
