@@ -57,7 +57,7 @@ namespace Serialization
         private void PopulateLB(List<Games> gm)
         {
             lstbox.Items.Clear();
-            foreach (var g in G)
+            foreach (var g in gm)
             {
                 lstbox.Items.Add(g);
             }
