@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v944-bb-16.jpg?w=800&amp;dpr=1&amp;fit=default&amp;crop=default&amp;q=65&amp;vib=3&amp;con=3&amp;usm=15&amp;bg=F4F4F3&amp;ixlib=js-2.2.1&amp;s=b204c8b2d8b3e450514bdfcffad89cc3"/>
         </Grid.Background>
-        <ComboBox x:Name="cbBox" HorizontalAlignment="Left" Margin="55,159,0,0" VerticalAlignment="Top" Width="194" Height="24"/>
+        <ComboBox x:Name="cbBox" HorizontalAlignment="Left" Margin="55,159,0,0" VerticalAlignment="Top" Width="194" Height="24" SelectionChanged="cbBox_SelectionChanged"/>
         <ListBox x:Name="lstbox" HorizontalAlignment="Left" Height="291" Margin="317,119,0,0" VerticalAlignment="Top" Width="443" MouseDoubleClick="lstbox_MouseDoubleClick"/>
         <Button x:Name="btb" Content="Push" HorizontalAlignment="Left" Margin="108,290,0,0" VerticalAlignment="Top" Width="100" Height="26" IsDefault="True" Click="btb_Click"/>
         <Label Content="Game Generator" HorizontalAlignment="Left" Margin="216,39,0,0" VerticalAlignment="Top" FontSize="49"/>

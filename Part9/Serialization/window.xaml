@@ -10,7 +10,13 @@
         <Grid.Background>
             <ImageBrush ImageSource="https://images.wallpapersden.com/image/download/winter-minimalist_a21pZmWUmZqaraWkpJRmbmdlrWZlbWU.jpg"/>
         </Grid.Background>
-        <TextBlock x:Name="txtdes" HorizontalAlignment="Left" Height="209" Margin="179,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
+        <TextBlock x:Name="txtdes" HorizontalAlignment="Left" Height="209" Margin="30,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Background="#FFFCFBFB"/>
+        <TextBlock x:Name="txtdate" HorizontalAlignment="Left" Height="35" Margin="519,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Background="#FFFAF6F6"/>
+        <TextBlock x:Name="txtscore" HorizontalAlignment="Left" Height="35" Margin="519,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Background="#FFFAF8F8"><Run Text=""/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="txtuser" HorizontalAlignment="Left" Height="35" Margin="519,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Background="#FFFAF8F8"><Run Text=""/><LineBreak/><Run/></TextBlock>
+        <Label Content="Release Date" HorizontalAlignment="Left" Margin="546,76,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Score" HorizontalAlignment="Left" Margin="573,180,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="User Review" HorizontalAlignment="Left" Margin="546,256,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
 
     </Grid>
 </Window>

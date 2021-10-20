@@ -26,6 +26,9 @@ namespace Serialization
         public void SetupWindow(Games GG)
         {
             txtdes.Text = GG.summary;
+            txtdate.Text = GG.release_date;
+            txtscore.Text = GG.meta_source;
+            txtuser.Text = GG.user_review;
         }
     }
 }

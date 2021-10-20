@@ -53,8 +53,10 @@ namespace Serialization
                     cbBox.Items.Add(item.platform);
                 }
             }
-
+         
+        
         }
+      
             private void btb_Click(object sender, RoutedEventArgs e)
             {
 
@@ -64,15 +66,36 @@ namespace Serialization
         }
 
       
-       
-
         private void lstbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Games selection = (Games)lstbox.SelectedItems;
+            Games selection = (Games)lstbox.SelectedItem;
             window w = new window();
             w.SetupWindow(selection);
             w.ShowDialog();
 
+        }
+
+        private void cbBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+  
+        private List<Games> FillGames(List<Games> GMS)
+        {
+            string ggg = cbBox.SelectedValue.ToString();
+            List<Games> updategames = new List<Games>();
+            foreach (var item in GMS)
+            {
+                if (ggg.ToLower()=="all")
+                {
+                    updategames.Add(item);
+                }
+                else if (item.platform.Contains(ggg))
+                {
+                    updategames.Add(item);
+                }
+            }
+            return updategames;
         }
     }
     }
