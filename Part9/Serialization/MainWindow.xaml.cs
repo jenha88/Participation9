@@ -23,6 +23,7 @@ namespace Serialization
     public partial class MainWindow : Window
     {
         private List<Games> G = new List<Games>();
+        private List<Games> updategames;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,12 +34,9 @@ namespace Serialization
                 G.Add(new Games(item));
             }
 
-            foreach (var g in G)
-            {
-                lstbox.Items.Add(g);
-            }
 
             PopulateCB(G);
+            PopulateLB(G);
         }
         private void PopulateCB(List<Games> gg)
         {
@@ -55,6 +53,14 @@ namespace Serialization
             }
          
         
+        }
+        private void PopulateLB(List<Games> gm)
+        {
+            lstbox.Items.Clear();
+            foreach (var g in G)
+            {
+                lstbox.Items.Add(g);
+            }
         }
       
             private void btb_Click(object sender, RoutedEventArgs e)
@@ -77,6 +83,8 @@ namespace Serialization
 
         private void cbBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            updategames = FillGames(G);
+            PopulateLB(updategames);
 
         }
   
