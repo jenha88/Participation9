@@ -66,7 +66,7 @@ namespace Serialization
             private void btb_Click(object sender, RoutedEventArgs e)
             {
 
-            string jj = JsonConvert.SerializeObject(G);
+            string jj = JsonConvert.SerializeObject(updategames);
             File.WriteAllText("games.json", jj);
 
         }
